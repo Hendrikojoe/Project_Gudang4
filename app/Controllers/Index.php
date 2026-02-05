@@ -2,7 +2,9 @@
 
 namespace App\Controllers;
 
-class Home extends BaseController
+use App\Controllers\BaseController;
+
+class Index extends BaseController
 {
     public function index()
     {
@@ -17,13 +19,6 @@ class Home extends BaseController
             'isLoggedIn' => session()->get('isLoggedIn') ?? false
         ];
         
-        return view('welcome_message', $data);
-    }
-    
-    public function test()
-    {
-        echo "Test berjalan!";
-        echo "<br>PHP Version: " . phpversion();
-        echo "<br><a href='/'>Kembali</a>";
+        return view('index', $data);
     }
 }
