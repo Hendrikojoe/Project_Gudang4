@@ -47,3 +47,11 @@ Options -Indexes
 # Disable server signature start
 ServerSignature Off
 # Disable server signature end
+<<<<<<< HEAD
+=======
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
+>>>>>>> d761bdf598ef432ecbd169bd5a5108d8b34f37a9

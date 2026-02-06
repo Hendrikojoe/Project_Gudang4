@@ -4,8 +4,34 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
+<<<<<<< HEAD
     public function index(): string
     {
         return view('welcome_message');
     }
 }
+=======
+    public function index()
+    {
+        $data = [
+            'title' => 'Halaman Utama - Website Elegan',
+            'page' => 'home',
+            'hour' => date('H'),
+            'date' => date('d F Y'),
+            'time' => date('H:i:s'),
+            'php_version' => phpversion(),
+            'ci_version' => \CodeIgniter\CodeIgniter::CI_VERSION,
+            'isLoggedIn' => session()->get('isLoggedIn') ?? false
+        ];
+        
+        return view('welcome_message', $data);
+    }
+    
+    public function test()
+    {
+        echo "Test berjalan!";
+        echo "<br>PHP Version: " . phpversion();
+        echo "<br><a href='/'>Kembali</a>";
+    }
+}
+>>>>>>> d761bdf598ef432ecbd169bd5a5108d8b34f37a9
