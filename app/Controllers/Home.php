@@ -4,13 +4,6 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-<<<<<<< HEAD
-    public function index(): string
-    {
-        return view('welcome_message');
-    }
-}
-=======
     public function index()
     {
         $data = [
@@ -24,7 +17,7 @@ class Home extends BaseController
             'isLoggedIn' => session()->get('isLoggedIn') ?? false
         ];
         
-        return view('welcome_message', $data);
+        return view('index', $data);
     }
     
     public function test()
@@ -34,4 +27,3 @@ class Home extends BaseController
         echo "<br><a href='/'>Kembali</a>";
     }
 }
->>>>>>> d761bdf598ef432ecbd169bd5a5108d8b34f37a9
