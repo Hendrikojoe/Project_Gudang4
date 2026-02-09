@@ -24,3 +24,11 @@ $routes->get('/', 'Home::index');
 $routes->get('barang', 'BarangController::index');
 $routes->get('transaksi', 'TransaksiController::index');
 $routes->get('operator', 'UserController::index');
+
+// Auth Routes
+$routes->get('login', 'Login::index');
+$routes->post('login/authenticate', 'Login::authenticate');
+$routes->get('logout', 'Login::logout');
+
+$routes->get('register', 'Register::index');
+$routes->post('register/save', 'Register::register');
