@@ -1,18 +1,26 @@
 <?= $this->extend('admin/layout') ?>
+
 <?= $this->section('content') ?>
+    <h1>Edit Barang</h1>
 
-<h3>Edit Barang</h3>
+    <?php if(session()->getFlashdata('errors')): ?>
+        <ul style="color:red">
+        <?php foreach(session()->getFlashdata('errors') as $error): ?>
+            <li><?= $error ?></li>
+        <?php endforeach ?>
+        </ul>
+    <?php endif ?>
 
-<form action="/barang/update/<?= $barang['id'] ?>" method="post">
-    <div class="mb-3">
-        <label>Nama Barang</label>
-        <input type="text" name="nama_barang" class="form-control" value="<?= $barang['nama_barang'] ?>" required>
-    </div>
-    <div class="mb-3">
-        <label>Stok</label>
-        <input type="number" name="stok" class="form-control" value="<?= $barang['stok'] ?>" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Update</button>
-</form>
+    <form action="/barang/update/<?= $barang['id'] ?>" method="post">
+        <label>Nama Barang:</label><br>
+        <input type="text" name="nama_barang" value="<?= old('nama_barang', $barang['nama_barang']) ?>"><br><br>
 
+        <label>Stok:</label><br>
+        <input type="number" name="stok" value="<?= old('stok', $barang['stok']) ?>"><br><br>
+
+        <button type="submit">Update</button>
+    </form>
+
+    <br>
+    <a href="/barang">Kembali</a>
 <?= $this->endSection() ?>

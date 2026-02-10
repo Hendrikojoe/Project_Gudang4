@@ -2,24 +2,23 @@
 
 namespace App\Controllers;
 
+use App\Controllers\BaseController;
 use App\Models\BarangModel;
 
 class BarangController extends BaseController
 {
-    protected $barangModel;
+    protected $barang;
 
     public function __construct()
     {
-        $this->barangModel = new BarangModel();
+        $this->barang = new BarangModel();
     }
 
     public function index()
     {
-        $data = [
-            'title' => 'Daftar Barang',
-            'barang' => $this->barangModel->findAll()
-        ];
-        return view('barang/index', $data);
+        return view('barang/index', [
+            'barangs' => $this->barang->findAll()
+        ]);
     }
 
     public function create()
@@ -29,34 +28,63 @@ class BarangController extends BaseController
 
     public function store()
     {
-        $this->barangModel->insert([
+        $rules = [
+            'nama_barang' => 'required|min_length[3]',
+            'stok'        => 'required|integer'
+        ];
+
+        if (! $this->validate($rules)) {
+            return redirect()->back()
+                ->withInput()
+                ->with('errors', $this->validator->getErrors());
+        }
+
+        $this->barang->insert([
             'nama_barang' => $this->request->getPost('nama_barang'),
-            'stok' => $this->request->getPost('stok'),
+            'stok'        => $this->request->getPost('stok')
         ]);
-        return redirect()->to('/barang');
+
+        return redirect()->to('/barang')->with('success', 'Data berhasil ditambahkan');
     }
 
     public function edit($id)
     {
-        $data = [
-            'title' => 'Edit Barang',
-            'barang' => $this->barangModel->find($id)
-        ];
-        return view('barang/edit', $data);
+        return view('barang/edit', [
+            'barang' => $this->barang->find($id)
+        ]);
     }
 
     public function update($id)
     {
-        $this->barangModel->update($id, [
+        $rules = [
+            'nama_barang' => 'required|min_length[3]',
+            'stok'        => 'required|integer'
+        ];
+
+        if (! $this->validate($rules)) {
+            return redirect()->back()->withInput();
+        }
+
+        $this->barang->update($id, [
             'nama_barang' => $this->request->getPost('nama_barang'),
-            'stok' => $this->request->getPost('stok'),
+            'stok'        => $this->request->getPost('stok')
         ]);
-        return redirect()->to('/barang');
+
+        return redirect()->to('/barang')->with('success', 'Data berhasil diperbarui');
     }
 
     public function delete($id)
     {
-        $this->barangModel->delete($id);
-        return redirect()->to('/barang');
+        $this->barang->delete($id);
+        return redirect()->to('/barang')->with('success', 'Data berhasil dihapus');
+    }
+
+    // 🔹 API JSON
+    public function api()
+    {
+        return $this->response->setJSON([
+            'success' => true,
+            'data' => $this->barang->findAll()
+        ]);
     }
 }

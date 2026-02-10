@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Controllers\BaseController;
 use App\Models\TransaksiModel;
 use App\Models\BarangModel;
 
@@ -23,23 +24,26 @@ class TransaksiController extends BaseController
             'transaksi' => $this->transaksiModel->findAll(),
             'barang' => $this->barangModel->findAll()
         ];
-        return view('transaksi/index', $data);
+
+        return view('admin/transaksi/index', $data);
     }
 
     public function create()
     {
         $data['barang'] = $this->barangModel->findAll();
-        return view('transaksi/create', $data);
+        return view('admin/transaksi/create', $data);
     }
 
-    public function store()
+    public function masuk()
     {
-        $this->transaksiModel->insert([
-            'id_barang' => $this->request->getPost('id_barang'),
-            'jumlah' => $this->request->getPost('jumlah'),
-            'tanggal' => $this->request->getPost('tanggal'),
-        ]);
-        return redirect()->to('/transaksi');
+        $data['barang'] = $this->barangModel->findAll();
+        return view('admin/transaksi/create', $data);
+    }
+
+    public function keluar()
+    {
+        $data['barang'] = $this->barangModel->findAll();
+        return view('admin/transaksi/create', $data);
     }
 
     public function edit($id)
@@ -48,22 +52,7 @@ class TransaksiController extends BaseController
             'transaksi' => $this->transaksiModel->find($id),
             'barang' => $this->barangModel->findAll()
         ];
-        return view('transaksi/edit', $data);
-    }
 
-    public function update($id)
-    {
-        $this->transaksiModel->update($id, [
-            'id_barang' => $this->request->getPost('id_barang'),
-            'jumlah' => $this->request->getPost('jumlah'),
-            'tanggal' => $this->request->getPost('tanggal'),
-        ]);
-        return redirect()->to('/transaksi');
-    }
-
-    public function delete($id)
-    {
-        $this->transaksiModel->delete($id);
-        return redirect()->to('/transaksi');
+        return view('admin/transaksi/edit', $data);
     }
 }

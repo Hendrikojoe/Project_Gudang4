@@ -1,31 +1,32 @@
 <?= $this->extend('admin/layout') ?>
+
 <?= $this->section('content') ?>
+    <h1>Data Barang</h1>
 
-<h3>Daftar Barang</h3>
-<a href="/barang/create" class="btn btn-success mb-3">Tambah Barang</a>
+    <?php if(session()->getFlashdata('success')): ?>
+        <p style="color: green"><?= session()->getFlashdata('success') ?></p>
+    <?php endif; ?>
 
-<table class="table table-bordered">
-    <thead>
+    <a href="/barang/create">Tambah Barang</a>
+
+    <table border="1" cellpadding="5" cellspacing="0">
         <tr>
             <th>ID</th>
             <th>Nama Barang</th>
             <th>Stok</th>
             <th>Aksi</th>
         </tr>
-    </thead>
-    <tbody>
-        <?php foreach($barang as $b): ?>
+
+        <?php foreach($barangs as $b): ?>
         <tr>
             <td><?= $b['id'] ?></td>
             <td><?= $b['nama_barang'] ?></td>
             <td><?= $b['stok'] ?></td>
             <td>
-                <a href="/barang/edit/<?= $b['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
-                <a href="/barang/delete/<?= $b['id'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin?')">Hapus</a>
+                <a href="/barang/edit/<?= $b['id'] ?>">Edit</a> |
+                <a href="/barang/delete/<?= $b['id'] ?>" onclick="return confirm('Hapus barang ini?')">Hapus</a>
             </td>
         </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
-
+        <?php endforeach ?>
+    </table>
 <?= $this->endSection() ?>
