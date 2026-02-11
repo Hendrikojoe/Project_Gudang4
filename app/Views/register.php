@@ -1,10 +1,5 @@
 <?=$this->extend("layout")?>
 <?=$this->section("content")?>
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
-</head>
 
 <style>
   body {
@@ -25,7 +20,8 @@
     width: 850px;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   }
 
   .register-left {
@@ -40,7 +36,6 @@
   }
 
   .register-right {
-    background: #fff;
     flex: 1;
     padding: 60px 40px;
     display: flex;
@@ -51,23 +46,43 @@
   .btn-teal {
     background: #009fa5;
     border: none;
+    transition: 0.3s;
   }
 
   .btn-teal:hover {
-    background: #00818a;
+    background: #007b82;
+  }
+
+  .btn-outline-light:hover {
+    color: #009fa5 !important;
+    background: #fff !important;
+    border-color: #fff !important;
+  }
+
+  .back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .back-btn:hover {
+    color: #009fa5;
   }
 </style>
 
 <div class="wrapper">
   <div class="card-register">
     <div class="register-left">
-      <h2>Selamat Datang!</h2>
-      <p class="mt-2">Masuk dengan akun anda jika sudah terdaftar</p>
+      <h2>Halo!</h2>
+      <p class="mt-2 text-center">Sudah punya akun? Silakan masuk sekarang.</p>
       <a href="<?= base_url('/login'); ?>" class="btn btn-outline-light mt-3">SIGN IN</a>
     </div>
 
     <div class="register-right">
-      <h3 class="fw-bold mb-4">Buat Akun</h3>
+      <h3 class="fw-bold mb-4 text-dark">Buat Akun Baru</h3>
 
       <?php if(isset($validation)):?>
         <div class="alert alert-danger"><?= $validation->listErrors() ?></div>
@@ -85,6 +100,10 @@
         </div>
         <button type="submit" class="btn btn-teal w-100 text-white">DAFTAR</button>
       </form>
+
+      <a href="<?= base_url('/') ?>" class="back-btn">
+        ← Kembali ke Beranda
+      </a>
     </div>
   </div>
 </div>

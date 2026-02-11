@@ -1,13 +1,6 @@
-<?= $this->extend('admin/layout') ?>
-<?= $this->section('content') ?>
+<h2>Laporan Gudang</h2>
 
-<h3>Data Laporan</h3>
-
-<a href="/laporan/export/pdf" class="btn btn-danger mb-3">
-    Export PDF
-</a>
-
-<table class="table table-bordered">
+<table border="1" width="100%" cellpadding="5" cellspacing="0">
     <thead>
         <tr>
             <th>ID</th>
@@ -27,5 +20,3 @@
         <?php endforeach; ?>
     </tbody>
 </table>
-
-<?= $this->endSection() ?>

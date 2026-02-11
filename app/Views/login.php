@@ -20,11 +20,11 @@
     width: 850px;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   }
 
   .login-left {
-    background: #fff;
     flex: 1;
     padding: 50px 40px;
   }
@@ -43,36 +43,41 @@
   .btn-teal {
     background: #009fa5;
     border: none;
+    transition: 0.3s;
   }
 
   .btn-teal:hover {
-    background: #00818a;
+    background: #007b82;
   }
 
-  .social-icons i {
-    font-size: 22px;
-    margin: 0 10px;
+  .btn-outline-light:hover {
+    color: #009fa5 !important;
+    background: #fff !important;
+    border-color: #fff !important;
+  }
+
+  .back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
     color: #555;
-    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .back-btn:hover {
+    color: #009fa5;
   }
 </style>
 
 <div class="wrapper">
   <div class="card-login">
     <div class="login-left">
-      <h3 class="fw-bold mb-4">Sign In</h3>
+      <h3 class="fw-bold mb-4 text-dark">Masuk Akun</h3>
 
       <?php if(session()->getFlashdata('error')):?>
         <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
       <?php endif;?>
-
-      <div class="social-icons mb-3">
-        <i class="bi bi-facebook"></i>
-        <i class="bi bi-google"></i>
-        <i class="bi bi-linkedin"></i>
-      </div>
-
-      <p class="text-muted small mb-4">Atau gunakan akun anda</p>
 
       <form action="<?= base_url('/login/authenticate'); ?>" method="post">
         <div class="mb-3">
@@ -84,11 +89,15 @@
         <a href="#" class="small text-muted d-block mb-3">Lupa kata sandi?</a>
         <button type="submit" class="btn btn-teal w-100 text-white">SIGN IN</button>
       </form>
+
+      <a href="<?= base_url('/') ?>" class="back-btn">
+        ← Kembali ke Beranda
+      </a>
     </div>
 
     <div class="login-right">
-      <h2>Halo, Teman!</h2>
-      <p class="mt-2">Daftarkan diri anda dan mulai gunakan layanan kami segera</p>
+      <h2>Selamat Datang!</h2>
+      <p class="mt-2 text-center">Belum punya akun? Daftar sekarang dan nikmati layanan kami.</p>
       <a href="<?= base_url('/register'); ?>" class="btn btn-outline-light mt-3">SIGN UP</a>
     </div>
   </div>
