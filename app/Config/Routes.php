@@ -3,6 +3,7 @@
 namespace Config;
 
 use CodeIgniter\Router\RouteCollection;
+use Config\Services;
 
 $routes = Services::routes();
 
@@ -12,20 +13,13 @@ $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 
-// Dashboard Routes
-$routes->get('dashboard', 'Dashboard::index');
-$routes->get('admin/dashboard', 'Dashboard::index');
-$routes->get('admin', 'Dashboard::index');
-
-// Default route
+// ================= HOME =================
 $routes->get('/', 'Home::index');
+$routes->get('dashboard', 'Dashboard::index');
+$routes->get('admin', 'Dashboard::index');
+$routes->get('admin/dashboard', 'Dashboard::index');
 
-// Anda bisa tambahkan route lain sesuai kebutuhan
-$routes->get('barang', 'BarangController::index');
-$routes->get('transaksi', 'TransaksiController::index');
-$routes->get('operator', 'UserController::index');
-
-// Auth Routes
+// ================= AUTH =================
 $routes->get('login', 'Login::index');
 $routes->post('login/authenticate', 'Login::authenticate');
 $routes->get('logout', 'Login::logout');
@@ -33,14 +27,25 @@ $routes->get('logout', 'Login::logout');
 $routes->get('register', 'Register::index');
 $routes->post('register/save', 'Register::register');
 
-// Barang Masuk
-$routes->get('barangmasuk', 'BarangMasuk::index');
-$routes->get('barangmasuk/create', 'BarangMasuk::create');
-$routes->post('barangmasuk/store', 'BarangMasuk::store');
-$routes->get('barangmasuk/delete/(:num)', 'BarangMasuk::delete/$1');
+// ================= DATA BARANG =================
+$routes->get('barang', 'BarangController::index');
+$routes->get('barang/create', 'BarangController::create');
+$routes->post('barang/store', 'BarangController::store');
 
-// Barang Keluar
-$routes->get('barangkeluar', 'BarangKeluar::index');
-$routes->get('barangkeluar/create', 'BarangKeluar::create');
-$routes->post('barangkeluar/store', 'BarangKeluar::store');
-$routes->get('barangkeluar/delete/(:num)', 'BarangKeluar::delete/$1');
+$routes->get('barang/edit/(:num)', 'BarangController::edit/$1');
+$routes->post('barang/update/(:num)', 'BarangController::update/$1');
+$routes->get('barang/delete/(:num)', 'BarangController::delete/$1');
+// FORM HALAMAN
+$routes->get('transaksi/masuk/(:num)', 'BarangController::formMasuk/$1');
+$routes->get('transaksi/keluar/(:num)', 'BarangController::formKeluar/$1');
+
+// PROSES SIMPAN
+$routes->post('transaksi/masuk/(:num)', 'BarangController::masuk/$1');
+$routes->post('transaksi/keluar/(:num)', 'BarangController::keluar/$1');
+
+// ================= OPERATOR =================
+$routes->get('operator', 'UserController::index');
+
+// ================= LAPORAN =================
+$routes->get('laporan', 'LaporanController::index');
+$routes->get('laporan/export/pdf', 'LaporanController::exportPdf');

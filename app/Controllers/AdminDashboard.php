@@ -11,17 +11,18 @@ class AdminDashboard extends BaseController
 {
     public function index()
     {
+        // Hanya bisa diakses oleh admin
         if (!session()->get('isLoggedIn') || session()->get('role') !== 'admin') {
             return redirect()->to('/dashboard');
         }
 
-        $barangModel     = new BarangModel();
-        $userModel       = new UserModel();
-        $transaksiModel  = new TransaksiModel();
+        $barangModel    = new BarangModel();
+        $userModel      = new UserModel();
+        $transaksiModel = new TransaksiModel();
 
         $today = date('Y-m-d');
 
-        // Statistik dashboard
+        // Statistik Dashboard
         $todayMasuk = $transaksiModel
             ->where('tanggal', $today)
             ->where('jenis_transaksi', 'masuk')
@@ -40,24 +41,31 @@ class AdminDashboard extends BaseController
 
         $totalTransaksi = $transaksiModel->countAll();
 
+        // Data tabel transaksi hari ini
         $transaksiHariIni = $transaksiModel
-            ->where('tanggal', $today)
+            ->select('transaksi.*, barang.nama_barang, user.nama as operator')
+            ->join('barang', 'barang.id = transaksi.barang_id')
+            ->join('user', 'user.id = transaksi.user_id', 'left')
+            ->where('transaksi.tanggal', $today)
+            ->orderBy('transaksi.jam', 'DESC')
             ->findAll();
 
+        // Barang dengan stok menipis
         $stokRendah = $barangModel
             ->where('stok <=', 5)
             ->findAll();
 
-        // Dummy data supaya view tidak error
-        $topOperator = [
-            ['nama' => 'Admin', 'total' => 5],
-            ['nama' => 'Operator', 'total' => 3],
-        ];
+        // Operator teraktif hari ini
+        $topOperator = $transaksiModel
+            ->select('user.nama, COUNT(transaksi.id) as total')
+            ->join('user', 'user.id = transaksi.user_id')
+            ->where('tanggal', $today)
+            ->groupBy('user.nama')
+            ->orderBy('total', 'DESC')
+            ->findAll(5);
 
         $data = [
-            'totalBarang'      => $jumlahBarang,
-            'stokTotal'        => $totalStok,
-            'totalUser'        => $userModel->countAll(),
+            'title'            => 'Dashboard Admin',
             'todayMasuk'       => $todayMasuk,
             'todayKeluar'      => $todayKeluar,
             'totalStok'        => $totalStok,
@@ -66,6 +74,7 @@ class AdminDashboard extends BaseController
             'transaksiHariIni' => $transaksiHariIni,
             'stokRendah'       => $stokRendah,
             'topOperator'      => $topOperator,
+            'totalUser'        => $userModel->countAll(),
         ];
 
         return view('admin/dashboard', $data);

@@ -1,6 +1,5 @@
 <?= $this->extend('admin/layout') ?>
 <?= $this->section('content') ?>
-
 <div class="container mt-4">
     <div class="card shadow-sm">
         <div class="card-header bg-success text-white">
@@ -39,3 +38,29 @@
 </div>
 
 <?= $this->endSection() ?>
+<h3>Tambah Barang Masuk</h3>
+
+<form action="/transaksi/masuk/store" method="post">
+
+    <div class="mb-3">
+        <label>Barang</label>
+        <select name="barang_id" class="form-control" required>
+            <?php foreach($barang as $b): ?>
+                <option value="<?= $b['id'] ?>">
+                    <?= $b['nama_barang'] ?> (stok: <?= $b['stok'] ?>)
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Jumlah</label>
+        <input type="number" name="jumlah" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Simpan</button>
+
+</form>
+
+<?= $this->endSection() ?>
+>>>>>>> 8bbb908 (perbaiki error dan penambahan sistem pada barang masuk dan keluar)
