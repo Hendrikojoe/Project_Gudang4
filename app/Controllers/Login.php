@@ -2,55 +2,54 @@
 
 namespace App\Controllers;
 
-use App\Controllers\BaseController;
 use App\Models\UserModel;
 
 class Login extends BaseController
 {
     public function index()
     {
-        return view('login'); // halaman login
+        // Jika sudah login, redirect ke admin dashboard
+        if (session()->get('isLoggedIn')) {
+            return redirect()->to('/admin-dashboard');
+        }
+        return view('index');
     }
 
     public function authenticate()
-    {
-        $session = session();
-        $userModel = new UserModel();
+{
+    $session = session();
+    $userModel = new UserModel();
 
-        $email = $this->request->getVar('email');
-        $password = $this->request->getVar('password');
+    $email = $this->request->getVar('email');
+    $password = $this->request->getVar('password');
 
-        $user = $userModel->where('email', $email)->first();
+    $user = $userModel->where('email', $email)->first();
 
-        if (is_null($user)) {
-            return redirect()->back()->withInput()->with('error', 'Invalid username or password.');
-        }
-
-        if (!password_verify($password, $user['password'])) {
-            return redirect()->back()->withInput()->with('error', 'Invalid username or password.');
-        }
-
-        // set session
-        $session->set([
-            'id' => $user['id'],
-            'email' => $user['email'],
-            'role' => $user['role'],
-            'isLoggedIn' => TRUE
-        ]);
-
-        // redirect berdasarkan role
-        switch ($user['role']) {
-            case 'admin':
-                return redirect()->to('/admin/dashboard');
-            case 'user':
-            default:
-                return redirect()->to('/dashboard');
-        }
+    if (!$user) {
+        return redirect()->to('/#login')->withInput()->with('error', 'Email tidak ditemukan.');
     }
+
+    if (!password_verify($password, $user['password'])) {
+        return redirect()->to('/#login')->withInput()->with('error', 'Password salah.');
+    }
+
+    $session->set([
+        'id'         => $user['id'],
+        'email'      => $user['email'],
+        'role'       => $user['role'],
+        'isLoggedIn' => true
+    ]);
+
+    if ($user['role'] == 'admin') {
+        return redirect()->to('admin/dashboard');
+    } else {
+        return redirect()->to('/user/dashboard');
+    }
+}
 
     public function logout()
     {
         session()->destroy();
-        return redirect()->to('/login');
+        return redirect()->to('/');
     }
 }

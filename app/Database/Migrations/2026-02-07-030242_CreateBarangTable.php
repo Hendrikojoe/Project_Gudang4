@@ -23,6 +23,18 @@ class CreateBarangTable extends Migration
                 'constraint' => 11,
                 'default'    => 0,
             ],
+            'satuan' => [
+                'type' => 'ENUM',
+                'constraint' => [
+                    'pcs','box','kg','gram','liter','ml',
+                    'meter','cm','mm','inch',
+                    'lusin','pack','roll','unit','set',
+                    'lembar','botol','kaleng',
+                    'sak','karung','drum','tabung',
+                    'pallet','crate','rim','bundle','strip','tube'
+                ],
+                'default' => 'pcs',
+            ],
             'created_at' => [
                 'type' => 'DATETIME',
                 'null' => true,

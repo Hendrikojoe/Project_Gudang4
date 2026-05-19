@@ -5,21 +5,18 @@ namespace App\Controllers;
 class Home extends BaseController
 {
     public function index()
-    {
-        $data = [
-            'title' => 'Halaman Utama - Website Elegan',
-            'page' => 'home',
-            'hour' => date('H'),
-            'date' => date('d F Y'),
-            'time' => date('H:i:s'),
-            'php_version' => phpversion(),
-            'ci_version' => \CodeIgniter\CodeIgniter::CI_VERSION,
-            'isLoggedIn' => session()->get('isLoggedIn') ?? false
-        ];
-        
-        return view('index', $data);
+{
+    if (!session()->get('isLoggedIn')) {
+        return view('index'); 
     }
-    
+
+    if (session()->get('role') == 'admin') {
+        return redirect()->to('/admin/dashboard');
+    }
+
+    return redirect()->to('/user/dashboard');
+}
+
     public function test()
     {
         echo "Test berjalan!";

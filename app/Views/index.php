@@ -1,1831 +1,1125 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-  <title><?= $title ?></title>
-=======
-  <title><?= $title ?> - ElegantSite</title>
->>>>>>> 57e7575adf4790bc752e34b3bcca0e05c6870d53
-
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<<<<<<< HEAD
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --primary-color: #2c3e50;
-      --accent-color: #0d6efd;
-      --light-bg: #f8f9fa;
-      --text-dark: #212529;
-=======
-  <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Swiper Slider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-  <style>
-    :root {
-      --primary: #2A3F54;
-      --primary-dark: #1E2C3A;
-      --primary-light: #3A4F64;
-      --accent: #00B4D8;
-      --accent-gradient: linear-gradient(135deg, #00B4D8 0%, #0096C7 100%);
-      --secondary: #6C757D;
-      --success: #2ECC71;
-      --warning: #F39C12;
-      --danger: #E74C3C;
-      --dark: #2C3E50;
-      --gray-100: #F8F9FA;
-      --gray-200: #E9ECEF;
-      --gray-300: #DEE2E6;
-      --gray-400: #CED4DA;
-      --gray-500: #ADB5BD;
-      --gray-600: #6C757D;
-      --gray-700: #495057;
-      --gray-800: #343A40;
-      --gray-900: #212529;
-      --white: #FFFFFF;
-      --black: #000000;
-      --shadow-sm: 0 2px 4px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.03);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
-      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -2px rgba(0,0,0,0.02);
-      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.05), 0 10px 10px -5px rgba(0,0,0,0.02);
-      --shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.1);
-      --shadow-accent: 0 10px 20px -5px rgba(0, 180, 216, 0.2);
-      --border-radius-sm: 0.375rem;
-      --border-radius: 0.5rem;
-      --border-radius-lg: 0.75rem;
-      --border-radius-xl: 1rem;
-      --border-radius-2xl: 1.5rem;
-      --border-radius-full: 9999px;
->>>>>>> 57e7575adf4790bc752e34b3bcca0e05c6870d53
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-<<<<<<< HEAD
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background-color: var(--light-bg);
-      color: var(--text-dark);
-    }
-
-    .navbar {
-      background-color: var(--primary-color);
-    }
-
-    .navbar-brand {
-      font-weight: 600;
-    }
-
-    .navbar-brand span {
-      color: var(--accent-color);
-    }
-
-    .hero-section {
-      background-color: white;
-      padding: 100px 0;
-      text-align: center;
-    }
-
-    .hero-section h1 {
-      font-weight: 700;
-      font-size: 2.8rem;
-      margin-bottom: 20px;
-      color: var(--primary-color);
-    }
-
-    .hero-section p {
-      color: #555;
-      max-width: 600px;
-      margin: 0 auto 30px;
-    }
-
-    .btn-custom {
-      padding: 10px 25px;
-      border-radius: 30px;
-      font-weight: 500;
-      border: none;
-    }
-
-    .btn-primary {
-      background-color: var(--accent-color);
-      color: white;
-    }
-
-    .btn-outline-dark {
-      border: 1px solid #333;
-    }
-
-    .features-section {
-      background-color: #fff;
-      padding: 80px 0;
-    }
-
-    .feature-card {
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      border-radius: 10px;
-      padding: 30px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .feature-card:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transform: translateY(-4px);
-    }
-
-    .feature-card i {
-      font-size: 2rem;
-      color: var(--accent-color);
-      margin-bottom: 15px;
-    }
-
-    .stats-section {
-      background: var(--primary-color);
-      color: white;
-      padding: 60px 0;
-    }
-
-    .stat-item {
-      text-align: center;
-=======
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--gray-100);
-      color: var(--gray-800);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--gray-200);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--primary-light);
-      border-radius: var(--border-radius-full);
-      transition: all 0.3s ease;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--accent);
-    }
-
-    /* Typography */
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    /* Navbar Modern */
-    .navbar {
-      background: rgba(42, 63, 84, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 1rem 0;
-      box-shadow: var(--shadow-md);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .navbar-brand {
-      font-weight: 800;
-      font-size: 1.5rem;
-      letter-spacing: -0.02em;
-      color: var(--white) !important;
-      position: relative;
-    }
-
-    .navbar-brand span {
-      color: var(--accent);
-      position: relative;
-      display: inline-block;
-    }
-
-    .navbar-brand i {
-      color: var(--accent);
-      margin-right: 0.5rem;
-      transition: transform 0.3s ease;
-    }
-
-    .navbar-brand:hover i {
-      transform: rotate(360deg);
-    }
-
-    .nav-link {
-      color: rgba(255,255,255,0.85) !important;
-      font-weight: 500;
-      padding: 0.5rem 1rem !important;
-      margin: 0 0.25rem;
-      border-radius: var(--border-radius-sm);
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .nav-link i {
-      margin-right: 0.5rem;
-      font-size: 0.9rem;
-      transition: transform 0.3s ease;
-    }
-
-    .nav-link:hover {
-      color: var(--white) !important;
-      background: rgba(255,255,255,0.1);
-    }
-
-    .nav-link:hover i {
-      transform: translateY(-2px);
-    }
-
-    .nav-link.active {
-      color: var(--white) !important;
-      background: rgba(0, 180, 216, 0.2);
-    }
-
-    .nav-link.active::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 1rem;
-      right: 1rem;
-      height: 2px;
-      background: var(--accent);
-      border-radius: var(--border-radius-full);
-    }
-
-    /* Hero Section Modern */
-    .hero-section {
-      position: relative;
-      padding: 120px 0;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      overflow: hidden;
-    }
-
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon points="0,100 100,0 100,100" fill="rgba(255,255,255,0.02)"/></svg>');
-      background-size: 100% 100%;
-      animation: slideRight 20s linear infinite;
-    }
-
-    .hero-section::after {
-      content: '';
-      position: absolute;
-      bottom: -50px;
-      left: 0;
-      right: 0;
-      height: 100px;
-      background: linear-gradient(to top right, transparent 49%, var(--white) 50%);
-    }
-
-    @keyframes slideRight {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 10;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      padding: 0.5rem 1.5rem;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(5px);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: var(--border-radius-full);
-      color: var(--white);
-      font-weight: 600;
-      font-size: 0.875rem;
-      letter-spacing: 0.5px;
-      margin-bottom: 1.5rem;
-      animation: fadeInDown 1s ease;
-    }
-
-    .hero-badge i {
-      margin-right: 0.5rem;
-      color: var(--accent);
-    }
-
-    .hero-section h1 {
-      font-weight: 800;
-      font-size: 3.5rem;
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
-      color: var(--white);
-      animation: fadeInUp 1s ease 0.2s both;
-    }
-
-    .hero-section .highlight {
-      position: relative;
-      display: inline-block;
-      color: var(--accent);
-    }
-
-    .hero-section .highlight::after {
-      content: '';
-      position: absolute;
-      bottom: 10px;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background: rgba(0, 180, 216, 0.3);
-      z-index: -1;
-      border-radius: var(--border-radius-full);
-    }
-
-    .hero-section p {
-      font-size: 1.25rem;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 2rem;
-      max-width: 600px;
-      animation: fadeInUp 1s ease 0.4s both;
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 2rem;
-      margin-top: 3rem;
-      animation: fadeInUp 1s ease 0.8s both;
-    }
-
-    .hero-stat-item {
-      text-align: center;
-    }
-
-    .hero-stat-value {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-
-    .hero-stat-label {
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.7);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* Buttons Modern */
-    .btn {
-      padding: 0.75rem 2rem;
-      font-weight: 600;
-      border-radius: var(--border-radius-full);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-      border: none;
-    }
-
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .btn:hover::before {
-      width: 300px;
-      height: 300px;
-    }
-
-    .btn-primary {
-      background: var(--accent-gradient);
-      color: var(--white);
-      box-shadow: var(--shadow-accent);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 25px -5px rgba(0, 180, 216, 0.4);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 2px solid rgba(255,255,255,0.3);
-      color: var(--white);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--accent);
-      background: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    /* Features Section Modern */
-    .features-section {
-      padding: 100px 0;
-      background: var(--white);
-      position: relative;
-    }
-
-    .section-header {
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto 60px;
-    }
-
-    .section-subtitle {
-      display: inline-block;
-      padding: 0.5rem 1.5rem;
-      background: linear-gradient(135deg, rgba(0, 180, 216, 0.1) 0%, rgba(0, 150, 199, 0.1) 100%);
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.875rem;
-      border-radius: var(--border-radius-full);
-      margin-bottom: 1rem;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    .section-description {
-      font-size: 1.125rem;
-      color: var(--gray-600);
-    }
-
-    .feature-card {
-      background: var(--white);
-      border-radius: var(--border-radius-xl);
-      padding: 2rem;
-      box-shadow: var(--shadow-lg);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-      border: 1px solid var(--gray-200);
-      height: 100%;
-    }
-
-    .feature-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--accent-gradient);
-      transform: scaleX(0);
-      transition: transform 0.4s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-2xl);
-      border-color: transparent;
-    }
-
-    .feature-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .feature-icon {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, rgba(0, 180, 216, 0.1) 0%, rgba(0, 150, 199, 0.1) 100%);
-      border-radius: var(--border-radius-lg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      transition: all 0.3s ease;
-    }
-
-    .feature-card:hover .feature-icon {
-      background: var(--accent-gradient);
-      transform: scale(1.1) rotate(5deg);
-    }
-
-    .feature-icon i {
-      font-size: 2rem;
-      color: var(--accent);
-      transition: all 0.3s ease;
-    }
-
-    .feature-card:hover .feature-icon i {
-      color: var(--white);
-      transform: scale(1.1);
-    }
-
-    .feature-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    .feature-description {
-      color: var(--gray-600);
-      margin-bottom: 0;
-      line-height: 1.7;
-    }
-
-    .feature-link {
-      display: inline-flex;
-      align-items: center;
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.875rem;
-      margin-top: 1.5rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .feature-link i {
-      margin-left: 0.5rem;
-      transition: transform 0.3s ease;
-    }
-
-    .feature-link:hover {
-      color: var(--primary);
-    }
-
-    .feature-link:hover i {
-      transform: translateX(5px);
-    }
-
-    /* Stats Section Modern */
-    .stats-section {
-      padding: 80px 0;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .stats-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.03)"/></svg>');
-      background-size: 60px 60px;
-      animation: rotate 60s linear infinite;
-    }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .stat-card {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      border-radius: var(--border-radius-lg);
-      border: 1px solid rgba(255,255,255,0.1);
-      transition: all 0.3s ease;
-    }
-
-    .stat-card:hover {
-      background: rgba(255,255,255,0.15);
-      transform: translateY(-5px);
-    }
-
-    .stat-icon {
-      width: 60px;
-      height: 60px;
-      background: rgba(255,255,255,0.15);
-      border-radius: var(--border-radius-full);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-    }
-
-    .stat-icon i {
-      font-size: 1.5rem;
-      color: var(--accent);
->>>>>>> 57e7575adf4790bc752e34b3bcca0e05c6870d53
-    }
-
-    .stat-value {
-      font-size: 2.5rem;
-<<<<<<< HEAD
-      font-weight: 600;
-      color: #0dcaf0;
-    }
-
-    .info-section {
-      padding: 80px 0;
-    }
-
-    .info-card {
-      background: white;
-      border: 1px solid #e5e5e5;
-      border-radius: 10px;
-      padding: 30px;
-    }
-
-    .info-card h3 {
-      font-weight: 600;
-      color: var(--primary-color);
-      margin-bottom: 15px;
-    }
-
-    footer {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 40px 0;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.75);
-=======
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 0.5rem;
-    }
-
-    .stat-label {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: rgba(255,255,255,0.8);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 0;
-    }
-
-    /* Info Section Modern */
-    .info-section {
-      padding: 100px 0;
-      background: var(--gray-100);
-    }
-
-    .info-card {
-      background: var(--white);
-      border-radius: var(--border-radius-xl);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-lg);
-      transition: all 0.3s ease;
-      border: 1px solid var(--gray-200);
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .info-card::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100px;
-      height: 100px;
-      background: linear-gradient(135deg, transparent 50%, rgba(0, 180, 216, 0.05) 50%);
-    }
-
-    .info-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-2xl);
-      border-color: transparent;
-    }
-
-    .info-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .info-icon {
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, rgba(0, 180, 216, 0.1) 0%, rgba(0, 150, 199, 0.1) 100%);
-      border-radius: var(--border-radius);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 1rem;
-    }
-
-    .info-icon i {
-      font-size: 1.25rem;
-      color: var(--accent);
-    }
-
-    .info-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 0;
-    }
-
-    .info-item {
-      display: flex;
-      align-items: center;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--gray-200);
-    }
-
-    .info-item:last-child {
-      border-bottom: none;
-    }
-
-    .info-item i {
-      width: 24px;
-      color: var(--accent);
-      margin-right: 1rem;
-    }
-
-    .info-item strong {
-      color: var(--primary);
-      margin-left: 0.5rem;
-    }
-
-    .tech-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .tech-list li {
-      display: flex;
-      align-items: center;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--gray-200);
-      transition: all 0.3s ease;
-    }
-
-    .tech-list li:last-child {
-      border-bottom: none;
-    }
-
-    .tech-list li:hover {
-      transform: translateX(10px);
-      color: var(--accent);
-    }
-
-    .tech-list i {
-      width: 24px;
-      color: var(--accent);
-      margin-right: 1rem;
-    }
-
-    /* Testimonials Section */
-    .testimonials-section {
-      padding: 100px 0;
-      background: var(--white);
-    }
-
-    .testimonial-card {
-      background: var(--white);
-      border-radius: var(--border-radius-xl);
-      padding: 2rem;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--gray-200);
-      margin: 1rem;
-    }
-
-    .testimonial-content {
-      margin-bottom: 1.5rem;
-    }
-
-    .testimonial-content i {
-      color: var(--accent);
-      font-size: 1.5rem;
-      opacity: 0.3;
-      margin-bottom: 1rem;
-    }
-
-    .testimonial-content p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--gray-700);
-      font-style: italic;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-    }
-
-    .author-avatar {
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
-      border-radius: var(--border-radius-full);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 1rem;
-      color: var(--white);
-      font-weight: 700;
-    }
-
-    .author-info h6 {
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 0.25rem;
-    }
-
-    .author-info span {
-      font-size: 0.75rem;
-      color: var(--gray-600);
-    }
-
-    /* CTA Section */
-    .cta-section {
-      padding: 80px 0;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .cta-content {
-      position: relative;
-      z-index: 10;
-      text-align: center;
-    }
-
-    .cta-title {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 1rem;
-    }
-
-    .cta-description {
-      font-size: 1.125rem;
-      color: rgba(255,255,255,0.9);
-      margin-bottom: 2rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    /* Footer Modern */
-    .footer {
-      background: var(--primary-dark);
-      padding: 60px 0 30px;
-      color: var(--white);
-    }
-
-    .footer-brand {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
-
-    .footer-brand span {
-      color: var(--accent);
-    }
-
-    .footer-description {
-      color: rgba(255,255,255,0.7);
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-    }
-
-    .social-links {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .social-link {
-      width: 40px;
-      height: 40px;
-      background: rgba(255,255,255,0.1);
-      border-radius: var(--border-radius-full);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      transition: all 0.3s ease;
-    }
-
-    .social-link:hover {
-      background: var(--accent);
-      transform: translateY(-3px);
-      color: var(--white);
-    }
-
-    .footer-title {
-      font-size: 1.125rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .footer-links li {
-      margin-bottom: 0.75rem;
-    }
-
-    .footer-links a {
-      color: rgba(255,255,255,0.7);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .footer-links a:hover {
-      color: var(--accent);
-      transform: translateX(5px);
-    }
-
-    .footer-links i {
-      margin-right: 0.5rem;
-      font-size: 0.75rem;
-    }
-
-    .footer-bottom {
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      text-align: center;
-      color: rgba(255,255,255,0.6);
-    }
-
-    .footer-bottom i {
-      color: var(--danger);
-      animation: heartbeat 1.5s ease infinite;
-    }
-
-    @keyframes heartbeat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInLeft {
-      from {
-        opacity: 0;
-        transform: translateX(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    @keyframes fadeInRight {
-      from {
-        opacity: 0;
-        transform: translateX(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 991.98px) {
-      .hero-section h1 {
-        font-size: 2.5rem;
-      }
-      
-      .section-title {
-        font-size: 2rem;
-      }
-      
-      .hero-stats {
-        flex-wrap: wrap;
-      }
-    }
-
-    @media (max-width: 767.98px) {
-      .hero-section {
-        padding: 80px 0;
-      }
-      
-      .hero-section h1 {
-        font-size: 2rem;
-      }
-      
-      .hero-section p {
-        font-size: 1rem;
-      }
-      
-      .section-title {
-        font-size: 1.75rem;
-      }
-      
-      .cta-title {
-        font-size: 1.75rem;
-      }
-      
-      .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .btn {
-        width: 100%;
-      }
->>>>>>> 57e7575adf4790bc752e34b3bcca0e05c6870d53
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GudangPro - Sistem Manajemen Gudang & Penyewaan</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated background particles */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(0, 159, 165, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 159, 165, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(0, 159, 165, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            animation: floatBg 20s ease-in-out infinite;
+        }
+
+        @keyframes floatBg {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.05); opacity: 0.7; }
+        }
+
+        .home-container {
+            width: 100%;
+            max-width: 1300px;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 48px;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            animation: slideUp 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            position: relative;
+            backdrop-filter: blur(0px);
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* Two column layout */
+        .home-grid {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Left panel - Branding */
+        .brand-panel {
+            flex: 1;
+            background: linear-gradient(135deg, #009fa5 0%, #006d72 100%);
+            padding: 60px 45px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .brand-panel::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08), transparent);
+            border-radius: 50%;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .brand-panel::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -20%;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.06), transparent);
+            border-radius: 50%;
+            animation: pulse 6s ease-in-out infinite reverse;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .brand-logo {
+            position: relative;
+            z-index: 2;
+        }
+
+        .brand-icon {
+            width: 90px;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            margin-bottom: 35px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.3s ease;
+            animation: floatIcon 3s ease-in-out infinite;
+        }
+
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .brand-title {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff, rgba(255,255,255,0.8));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .brand-desc {
+            font-size: 16px;
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 50px;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(10px);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .feature-text h4 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .feature-text p {
+            font-size: 13px;
+            opacity: 0.8;
+            margin: 0;
+        }
+
+        /* Right panel - Forms */
+        .form-panel {
+            flex: 1;
+            padding: 60px 50px;
+            background: white;
+        }
+
+        /* Tabs */
+        .tabs-container {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 40px;
+            background: #f1f5f9;
+            padding: 6px;
+            border-radius: 60px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: transparent;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .tab-btn i {
+            font-size: 18px;
+            transition: transform 0.3s;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background: rgba(0, 159, 165, 0.1);
+            color: #009fa5;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #009fa5, #007b82);
+            color: white;
+            box-shadow: 0 6px 20px rgba(0, 159, 165, 0.35);
+            transform: scale(1.02);
+        }
+
+        .tab-btn.active i {
+            transform: scale(1.1);
+        }
+
+        /* Forms */
+        .forms-wrapper {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .auth-form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateX(30px);
+            visibility: hidden;
+        }
+
+        .auth-form.active {
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+            position: relative;
+        }
+
+        .form-title {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0f172a, #334155);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .form-subtitle {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .input-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 18px;
+            transition: all 0.3s;
+            z-index: 1;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 16px 14px 48px;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            font-size: 15px;
+            transition: all 0.3s;
+            background: #f8fafc;
+        }
+
+        .form-control:focus {
+            border-color: #009fa5;
+            outline: none;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(0, 159, 165, 0.1);
+        }
+
+        .form-control.is-invalid {
+            border-color: #dc2626;
+            background: #fef2f2;
+        }
+
+        .invalid-feedback {
+            color: #dc2626;
+            font-size: 12px;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .password-hint {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 25px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #475569;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .checkbox-label input {
+            width: 18px;
+            height: 18px;
+            accent-color: #009fa5;
+            cursor: pointer;
+        }
+
+        .forgot-link {
+            color: #009fa5;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .forgot-link:hover {
+            color: #006d72;
+            text-decoration: underline;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #009fa5 0%, #007b82 100%);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-submit::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-submit:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 159, 165, 0.4);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Alert styles */
+        .alert {
+            padding: 14px 16px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            animation: slideIn 0.4s ease;
+            border: none;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .alert-danger {
+            background: linear-gradient(135deg, #fef2f2, #fee2e2);
+            color: #dc2626;
+            border-left: 4px solid #dc2626;
+        }
+
+        .alert-success {
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+            color: #10b981;
+            border-left: 4px solid #10b981;
+        }
+
+        .alert-warning {
+            background: linear-gradient(135deg, #fffbeb, #fef3c7);
+            color: #d97706;
+            border-left: 4px solid #d97706;
+        }
+
+        .alert i {
+            font-size: 20px;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .footer-text {
+            color: #94a3b8;
+            font-size: 12px;
+        }
+
+        .footer-link {
+            color: #009fa5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Loading spinner */
+        .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Eye toggle button */
+        .toggle-password {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #94a3b8;
+            transition: color 0.3s;
+            z-index: 2;
+            background: transparent;
+            border: none;
+        }
+
+        .toggle-password:hover {
+            color: #009fa5;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .home-grid {
+                flex-direction: column;
+            }
+
+            .brand-panel {
+                padding: 45px 35px;
+            }
+
+            .feature-grid {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .feature-item {
+                flex: 1;
+                min-width: 200px;
+            }
+
+            .form-panel {
+                padding: 45px 35px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                flex-direction: column;
+            }
+
+            .brand-title {
+                font-size: 34px;
+            }
+
+            .form-title {
+                font-size: 28px;
+            }
+
+            .tabs-container {
+                flex-direction: column;
+                border-radius: 24px;
+            }
+
+            .tab-btn {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                padding: 10px;
+            }
+
+            .brand-panel, .form-panel {
+                padding: 30px 25px;
+            }
+
+            .brand-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 35px;
+            }
+
+            .brand-title {
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<<<<<<< HEAD
+    <div class="home-container">
+        <div class="home-grid">
+            <!-- Left Panel - Branding -->
+            <div class="brand-panel" data-aos="fade-right" data-aos-duration="1000">
+                <div class="brand-logo">
+                    <div class="brand-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h1 class="brand-title">GudangPro</h1>
+                    <p class="brand-desc">Solusi Cerdas Manajemen Gudang & Inventaris</p>
+                </div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="<?= base_url('/') ?>">Elegant<span>Site</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="<?= base_url('/') ?>">Beranda</a></li>
-          <?php if ($isLoggedIn): ?>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('/dashboard') ?>">Dashboard</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('/logout') ?>">Logout</a></li>
-          <?php else: ?>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('/register') ?>">Daftar</a></li>
-            <li class="nav-item"><a class="nav-link" href="<?= base_url('/login') ?>">Login</a></li>
-          <?php endif; ?>
-        </ul>
-      </div>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Real-Time Monitoring</h4>
+                            <p>Pantau stok dan transaksi secara langsung</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck-fast"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Tracking Barang</h4>
+                            <p>Catat semua pergerakan barang masuk & keluar</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="feature-text">
+                            <h4>Manajemen Event</h4>
+                            <p>Kelola penyewaan untuk event Anda</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - Forms -->
+            <div class="form-panel" data-aos="fade-left" data-aos-duration="1000">
+                <!-- Tabs -->
+                <div class="tabs-container">
+                    <button class="tab-btn active" id="loginTab" onclick="switchTab('login')">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login
+                    </button>
+                    <button class="tab-btn" id="registerTab" onclick="switchTab('register')">
+                        <i class="fas fa-user-plus"></i>
+                        Register
+                    </button>
+                </div>
+
+                <!-- Forms Wrapper -->
+                <div class="forms-wrapper">
+                    <!-- Login Form -->
+                    <div class="auth-form active" id="loginForm">
+                        <h2 class="form-title">Selamat Datang Kembali</h2>
+                        <p class="form-subtitle">Masuk untuk mengakses dashboard Anda</p>
+
+                        <div id="loginAlert"></div>
+
+                        <form id="loginFormElement" action="<?= base_url('/login/authenticate'); ?>" method="post" autocomplete="off">
+                            <?= csrf_field() ?>
+
+                            <div class="form-group">
+                                <label class="form-label">Alamat Email</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope input-icon"></i>
+                                    <input type="email" class="form-control"
+                                        id="loginEmail"
+                                        placeholder="contoh@email.com"
+                                        name="email"
+                                        autocomplete="off"
+                                        required>
+                                </div>
+                                <div class="invalid-feedback" id="loginEmailError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock input-icon"></i>
+                                    <input type="password" class="form-control"
+                                        id="loginPassword"
+                                        placeholder="Masukkan password"
+                                        name="password"
+                                        autocomplete="off"
+                                        required>
+                                    <button type="button" class="toggle-password" onclick="togglePassword('loginPassword', 'toggleIconLogin')">
+                                        <i id="toggleIconLogin" class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-hint">
+                                    <i class="fas fa-info-circle"></i>
+                                    Password minimal 8 karakter
+                                </div>
+                            </div>
+
+                            <div class="form-options">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="remember" id="rememberCheckbox">
+                                    <span>Ingat saya</span>
+                                </label>
+                                <a href="#" class="forgot-link" onclick="showForgotPassword(event)">Lupa password?</a>
+                            </div>
+
+                            <button type="submit" class="btn-submit" id="loginBtn">
+                                <i class="fas fa-sign-in-alt"></i>
+                                Masuk
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Register Form -->
+                    <div class="auth-form" id="registerForm">
+                        <h2 class="form-title">Buat Akun Baru</h2>
+                        <p class="form-subtitle">Daftar sekarang dan kelola gudang Anda dengan mudah</p>
+
+                        <div id="registerAlert"></div>
+
+                        <form id="registerFormElement" action="<?= base_url('/register/save'); ?>" method="post" autocomplete="off">
+                            <?= csrf_field() ?>
+
+                            <div class="form-group">
+                                <label class="form-label">Nama Lengkap</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-user input-icon"></i>
+                                    <input type="text" class="form-control"
+                                        id="registerName"
+                                        placeholder="Masukkan nama lengkap"
+                                        name="name"
+                                        value="<?= set_value('name') ?>"
+                                        autocomplete="off"
+                                        required>
+                                </div>
+                                <div class="invalid-feedback" id="registerNameError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Alamat Email</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope input-icon"></i>
+                                    <input type="email" class="form-control"
+                                        id="registerEmail"
+                                        placeholder="contoh@email.com"
+                                        name="email"
+                                        value="<?= set_value('email') ?>"
+                                        autocomplete="off"
+                                        required>
+                                </div>
+                                <div class="invalid-feedback" id="registerEmailError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock input-icon"></i>
+                                    <input type="password" class="form-control"
+                                        id="registerPassword"
+                                        placeholder="Minimal 8 karakter"
+                                        name="password"
+                                        autocomplete="new-password"
+                                        required>
+                                    <button type="button" class="toggle-password" onclick="togglePassword('registerPassword', 'toggleIconRegPassword')">
+                                        <i id="toggleIconRegPassword" class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-hint">
+                                    <i class="fas fa-info-circle"></i>
+                                    Minimal 8 karakter (huruf, angka, dan simbol)
+                                </div>
+                                <div class="invalid-feedback" id="registerPasswordError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Konfirmasi Password</label>
+                                <div class="input-wrapper">
+                                    <i class="fas fa-lock input-icon"></i>
+                                    <input type="password" class="form-control"
+                                        id="registerConfirmPassword"
+                                        placeholder="Ulangi password"
+                                        name="confirm_password"
+                                        autocomplete="off"
+                                        required>
+                                    <button type="button" class="toggle-password" onclick="togglePassword('registerConfirmPassword', 'toggleIconRegConfirm')">
+                                        <i id="toggleIconRegConfirm" class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="invalid-feedback" id="registerConfirmError"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="termsCheckbox" required>
+                                    <span>Saya menyetujui <a href="#" class="footer-link">Syarat & Ketentuan</a> yang berlaku</span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-submit" id="registerBtn">
+                                <i class="fas fa-user-plus"></i>
+                                Daftar Sekarang
+                            </button>
+                        </form>
+
+                        <div class="form-footer">
+                            <p class="footer-text">
+                                Dengan mendaftar, Anda menyetujui
+                                <a href="#" class="footer-link">Syarat & Ketentuan</a> dan
+                                <a href="#" class="footer-link">Kebijakan Privasi</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <section class="hero-section">
-    <div class="container">
-      <h1>Selamat Datang di ElegantSite</h1>
-      <p>
-        <?= ($hour < 10) ? "Selamat pagi! Awali harimu dengan semangat baru." :
-          (($hour < 15) ? "Selamat siang! Semoga aktivitasmu berjalan lancar." :
-          (($hour < 19) ? "Selamat sore! Saatnya rehat sejenak." :
-          "Selamat malam! Waktunya menutup hari dengan tenang.")); ?>
-      </p>
-      <div>
-        <?php if ($isLoggedIn): ?>
-          <a href="<?= base_url('/dashboard') ?>" class="btn btn-primary me-2">Dashboard</a>
-          <a href="<?= base_url('/logout') ?>" class="btn btn-outline-dark">Logout</a>
-        <?php else: ?>
-          <a href="<?= base_url('/register') ?>" class="btn btn-primary me-2">Mulai Sekarang</a>
-          <a href="<?= base_url('/login') ?>" class="btn btn-outline-dark">Masuk Akun</a>
-        <?php endif; ?>
-=======
-
-  <!-- Navbar Modern -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="<?= base_url('/') ?>">
-        <i class="fas fa-cube"></i> Elegant<span>Site</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="<?= base_url('/') ?>">
-              <i class="fas fa-home"></i> Beranda
-            </a>
-          </li>
-          <?php if ($isLoggedIn): ?>
-            <li class="nav-item">
-              <a class="nav-link" href="<?= base_url('/dashboard') ?>">
-                <i class="fas fa-tachometer-alt"></i> Dashboard
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?= base_url('/logout') ?>">
-                <i class="fas fa-sign-out-alt"></i> Logout
-              </a>
-            </li>
-          <?php else: ?>
-            <li class="nav-item">
-              <a class="nav-link" href="<?= base_url('/register') ?>">
-                <i class="fas fa-user-plus"></i> Daftar
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="<?= base_url('/login') ?>">
-                <i class="fas fa-sign-in-alt"></i> Login
-              </a>
-            </li>
-          <?php endif; ?>
-        </ul>
-      </div>
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 28px; border: none;">
+                <div class="modal-header border-0" style="padding: 28px 28px 0 28px;">
+                    <h5 class="modal-title fw-bold">
+                        <i class="fas fa-key text-primary me-2" style="color: #009fa5 !important;"></i>
+                        Reset Password
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 24px 28px;">
+                    <p class="text-muted">Masukkan alamat email Anda, kami akan mengirimkan link untuk mereset password.</p>
+                    <div class="form-group">
+                        <label class="form-label">Alamat Email</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-envelope input-icon"></i>
+                            <input type="email" class="form-control" id="forgotEmail" placeholder="Masukkan email">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0" style="padding: 0 28px 28px 28px;">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal" style="border-radius: 14px; padding: 10px 24px;">Batal</button>
+                    <button type="button" class="btn btn-primary" onclick="sendResetLink()" style="background: linear-gradient(135deg, #009fa5, #007b82); border: none; border-radius: 14px; padding: 10px 28px;">
+                        <i class="fas fa-paper-plane me-2"></i>Kirim Link
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <!-- Hero Section Modern -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6" data-aos="fade-right">
-          <div class="hero-content">
-            <div class="hero-badge">
-              <i class="fas fa-rocket"></i> Platform Digital Terpercaya
-            </div>
-            <h1>
-              Solusi Digital <br/>
-              <span class="highlight">Profesional</span> untuk Bisnis Anda
-            </h1>
-            <p>
-              <?= ($hour < 10) ? "Selamat pagi! ☀️ Mulai hari Anda dengan semangat baru bersama platform digital terbaik." :
-                (($hour < 15) ? "Selamat siang! 🌤️ Waktunya mengoptimalkan produktivitas bisnis Anda." :
-                (($hour < 19) ? "Selamat sore! ⛅ Saatnya mengevaluasi perkembangan bisnis hari ini." :
-                "Selamat malam! 🌙 Waktunya merencanakan strategi bisnis esok hari.")); ?>
-            </p>
-            <div class="d-flex gap-3">
-              <?php if ($isLoggedIn): ?>
-                <a href="<?= base_url('/dashboard') ?>" class="btn btn-primary">
-                  <i class="fas fa-tachometer-alt me-2"></i> Dashboard
-                </a>
-                <a href="<?= base_url('/logout') ?>" class="btn btn-outline">
-                  <i class="fas fa-sign-out-alt me-2"></i> Logout
-                </a>
-              <?php else: ?>
-                <a href="<?= base_url('/register') ?>" class="btn btn-primary">
-                  <i class="fas fa-rocket me-2"></i> Mulai Sekarang
-                </a>
-                <a href="<?= base_url('/login') ?>" class="btn btn-outline">
-                  <i class="fas fa-key me-2"></i> Masuk Akun
-                </a>
-              <?php endif; ?>
-            </div>
-            <div class="hero-stats">
-              <div class="hero-stat-item">
-                <div class="hero-stat-value">500+</div>
-                <div class="hero-stat-label">Klien Puas</div>
-              </div>
-              <div class="hero-stat-item">
-                <div class="hero-stat-value">1000+</div>
-                <div class="hero-stat-label">Proyek</div>
-              </div>
-              <div class="hero-stat-item">
-                <div class="hero-stat-value">24/7</div>
-                <div class="hero-stat-label">Support</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6" data-aos="fade-left">
-          <div class="hero-image text-center">
-            <img src="https://via.placeholder.com/600x400/00B4D8/FFFFFF?text=Dashboard+Analytics" alt="Dashboard Preview" class="img-fluid rounded-4 shadow-2xl">
-          </div>
-        </div>
->>>>>>> 57e7575adf4790bc752e34b3bcca0e05c6870d53
-      </div>
-    </div>
-  </section>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<<<<<<< HEAD
-  <section class="features-section">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2>Fitur Unggulan</h2>
-        <p class="text-muted">Didesain untuk performa dan kemudahan maksimal.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="feature-card">
-            <i class="fas fa-shield-alt"></i>
-            <h5>Keamanan Terjamin</h5>
-            <p class="text-muted">Sistem terenkripsi untuk menjaga kerahasiaan data Anda.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-card">
-            <i class="fas fa-bolt"></i>
-            <h5>Performa Cepat</h5>
-            <p class="text-muted">Optimasi kecepatan dan tampilan di semua perangkat.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-card">
-            <i class="fas fa-headset"></i>
-            <h5>Dukungan 24/7</h5>
-            <p class="text-muted">Tim support siap membantu Anda kapan pun diperlukan.</p>
-=======
-  <!-- Features Section Modern -->
-  <section class="features-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-subtitle">
-          <i class="fas fa-star me-2"></i> KEUNGGULAN PLATFORM
-        </span>
-        <h2 class="section-title">Fitur Unggulan Kami</h2>
-        <p class="section-description">
-          Didesain khusus untuk memberikan pengalaman terbaik dan kemudahan dalam mengelola bisnis Anda.
-        </p>
-      </div>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 800
+        });
 
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h3 class="feature-title">Keamanan Enterprise</h3>
-            <p class="feature-description">
-              Sistem keamanan berlapis dengan enkripsi end-to-end dan proteksi data real-time untuk melindungi aset digital Anda.
-            </p>
-            <a href="#" class="feature-link">
-              Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
+        // Get flash messages from PHP
+        const flashError = '<?= session()->getFlashdata("error") ?>';
+        const flashSuccess = '<?= session()->getFlashdata("success") ?>';
 
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-bolt"></i>
-            </div>
-            <h3 class="feature-title">Performa Tinggi</h3>
-            <p class="feature-description">
-              Optimasi kecepatan loading super cepat dengan teknologi terbaru dan arsitektur cloud yang scalable.
-            </p>
-            <a href="#" class="feature-link">
-              Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-headset"></i>
-            </div>
-            <h3 class="feature-title">Support Premium</h3>
-            <p class="feature-description">
-              Tim support profesional siap membantu 24/7 dengan response time cepat dan solusi yang tepat sasaran.
-            </p>
-            <a href="#" class="feature-link">
-              Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i>
-            </a>
->>>>>>> 57e7575adf4790bc752e34b3bcca0e05c6870d53
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<<<<<<< HEAD
-  <section class="stats-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-6">
-          <div class="stat-item">
-            <div class="stat-value">150+</div>
-            <p>Proyek Selesai</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="stat-item">
-            <div class="stat-value">95%</div>
-            <p>Kepuasan Pengguna</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="stat-item">
-            <div class="stat-value">50+</div>
-            <p>Klien Aktif</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-6">
-          <div class="stat-item">
-            <div class="stat-value">24/7</div>
-            <p>Dukungan</p>
-=======
-  <!-- Stats Section Modern -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="100">
-          <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-users"></i>
-            </div>
-            <div class="stat-value">
-              <span class="counter" data-target="150">0</span>+
-            </div>
-            <div class="stat-label">Proyek Selesai</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="200">
-          <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-smile"></i>
-            </div>
-            <div class="stat-value">
-              <span class="counter" data-target="95">0</span>%
-            </div>
-            <div class="stat-label">Kepuasan Klien</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="300">
-          <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-building"></i>
-            </div>
-            <div class="stat-value">
-              <span class="counter" data-target="50">0</span>+
-            </div>
-            <div class="stat-label">Perusahaan Aktif</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-6" data-aos="zoom-in" data-aos-delay="400">
-          <div class="stat-card">
-            <div class="stat-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <div class="stat-value">24/7</div>
-            <div class="stat-label">Dukungan</div>
->>>>>>> 57e7575adf4790bc752e34b3bcca0e05c6870d53
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<<<<<<< HEAD
-  <section class="info-section">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <div class="info-card">
-            <h3>Informasi Sistem</h3>
-            <p>Tanggal: <?= $date ?></p>
-            <p>Waktu Server: <?= $time ?></p>
-            <p>PHP Version: <?= $php_version ?></p>
-            <p>CodeIgniter: v<?= $ci_version ?></p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="info-card">
-            <h3>Teknologi</h3>
-            <ul class="list-unstyled">
-              <li>Backend: PHP <?= $php_version ?></li>
-              <li>Frontend: JavaScript</li>
-              <li>UI Framework: Bootstrap 5</li>
-              <li>Database: MySQL</li>
-=======
-  <!-- Info Section Modern -->
-  <section class="info-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-subtitle">
-          <i class="fas fa-info-circle me-2"></i> INFORMASI SISTEM
-        </span>
-        <h2 class="section-title">Teknologi & Spesifikasi</h2>
-        <p class="section-description">
-          Dibangun dengan teknologi modern dan terpercaya untuk performa maksimal.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-          <div class="info-card">
-            <div class="info-header">
-              <div class="info-icon">
-                <i class="fas fa-server"></i>
-              </div>
-              <h3 class="info-title">Informasi Sistem</h3>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-calendar"></i>
-              <span>Tanggal: <strong><?= $date ?></strong></span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-clock"></i>
-              <span>Waktu Server: <strong><?= $time ?></strong></span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-code"></i>
-              <span>PHP Version: <strong><?= $php_version ?></strong></span>
-            </div>
-            <div class="info-item">
-              <i class="fas fa-bolt"></i>
-              <span>CodeIgniter: <strong>v<?= $ci_version ?></strong></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-          <div class="info-card">
-            <div class="info-header">
-              <div class="info-icon">
-                <i class="fas fa-cogs"></i>
-              </div>
-              <h3 class="info-title">Stack Teknologi</h3>
-            </div>
-            <ul class="tech-list">
-              <li>
-                <i class="fas fa-server"></i>
-                Backend: <strong>PHP <?= $php_version ?></strong> dengan CodeIgniter 4
-              </li>
-              <li>
-                <i class="fas fa-code"></i>
-                Frontend: <strong>JavaScript (ES6+)</strong> dengan Bootstrap 5
-              </li>
-              <li>
-                <i class="fas fa-database"></i>
-                Database: <strong>MySQL</strong> dengan Query Optimizer
-              </li>
-              <li>
-                <i class="fas fa-cloud"></i>
-                Hosting: <strong>Cloud Infrastructure</strong> dengan 99.9% Uptime
-              </li>
-              <li>
-                <i class="fas fa-lock"></i>
-                Security: <strong>SSL/TLS</strong> + Firewall Protection
-              </li>
->>>>>>> 57e7575adf4790bc752e34b3bcca0e05c6870d53
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<<<<<<< HEAD
-  <footer>
-    <p>&copy; <?= date('Y') ?> ElegantSite. Dibuat dengan CodeIgniter 4.</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-=======
-  <!-- Testimonials Section -->
-  <section class="testimonials-section">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <span class="section-subtitle">
-          <i class="fas fa-comments me-2"></i> TESTIMONIAL
-        </span>
-        <h2 class="section-title">Apa Kata Klien Kami</h2>
-        <p class="section-description">
-          Pengalaman nyata dari para profesional yang telah menggunakan platform kami.
-        </p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <i class="fas fa-quote-right"></i>
-              <p>
-                "Platform yang sangat membantu dalam mengelola inventaris perusahaan. Fitur lengkap dan mudah digunakan. Tim support sangat responsif!"
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">BS</div>
-              <div class="author-info">
-                <h6>Budi Santoso</h6>
-                <span>CEO, TechCorp</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <i class="fas fa-quote-right"></i>
-              <p>
-                "Keamanan data terjamin dan performa sangat cepat. Dashboard yang informatif memudahkan monitoring stok real-time."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">SA</div>
-              <div class="author-info">
-                <h6>Siti Aminah</h6>
-                <span>Manager, RetailPro</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              <i class="fas fa-quote-right"></i>
-              <p>
-                "Integrasi yang mulus dengan sistem existing. Reporting feature sangat detail dan customizable. Highly recommended!"
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">AR</div>
-              <div class="author-info">
-                <h6>Ahmad Rizki</h6>
-                <span>Owner, Toko Maju</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content" data-aos="zoom-in">
-        <h2 class="cta-title">Siap Mengoptimalkan Bisnis Anda?</h2>
-        <p class="cta-description">
-          Bergabunglah dengan ratusan perusahaan lain yang telah merasakan kemudahan mengelola bisnis dengan platform kami.
-        </p>
-        <div class="cta-buttons">
-          <?php if ($isLoggedIn): ?>
-            <a href="<?= base_url('/dashboard') ?>" class="btn btn-primary">
-              <i class="fas fa-tachometer-alt me-2"></i> Dashboard
-            </a>
-          <?php else: ?>
-            <a href="<?= base_url('/register') ?>" class="btn btn-primary">
-              <i class="fas fa-rocket me-2"></i> Mulai Gratis
-            </a>
-            <a href="<?= base_url('/login') ?>" class="btn btn-outline">
-              <i class="fas fa-key me-2"></i> Masuk Akun
-            </a>
-          <?php endif; ?>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer Modern -->
-  <footer class="footer">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-lg-4">
-          <a href="<?= base_url('/') ?>" class="footer-brand">
-            <i class="fas fa-cube"></i> Elegant<span>Site</span>
-          </a>
-          <p class="footer-description">
-            Platform digital terpercaya untuk membantu mengembangkan bisnis Anda dengan teknologi terkini dan tim profesional.
-          </p>
-          <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-2 offset-lg-2">
-          <h5 class="footer-title">Produk</h5>
-          <ul class="footer-links">
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Fitur</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Harga</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Integrasi</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Update</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2">
-          <h5 class="footer-title">Perusahaan</h5>
-          <ul class="footer-links">
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Tentang</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Karir</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Kontak</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2">
-          <h5 class="footer-title">Dukungan</h5>
-          <ul class="footer-links">
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Pusat Bantuan</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Dokumentasi</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-            <li><a href="#"><i class="fas fa-chevron-right"></i> Status</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <?= date('Y') ?> ElegantSite. Dibuat dengan <i class="fas fa-heart"></i> menggunakan CodeIgniter 4.</p>
-        <p class="mt-2 small opacity-75">Version 2.0.0 - All rights reserved</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100,
-      easing: 'ease-in-out'
-    });
-
-    // Counter Animation
-    function animateCounter(element) {
-      const target = parseInt(element.getAttribute('data-target'));
-      const current = parseInt(element.innerText);
-      const increment = target / 50;
-      
-      if (current < target) {
-        element.innerText = Math.ceil(current + increment);
-        setTimeout(() => animateCounter(element), 30);
-      } else {
-        element.innerText = target;
-      }
-    }
-
-    // Start counter animation when stats section is visible
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const counters = document.querySelectorAll('.counter');
-          counters.forEach(counter => {
-            counter.innerText = '0';
-            animateCounter(counter);
-          });
-          observer.unobserve(entry.target);
+        function displayFlashMessages() {
+            if (flashError && flashError !== '') {
+                showAlert('login', flashError, 'danger');
+            }
+            if (flashSuccess && flashSuccess !== '') {
+                showAlert('login', flashSuccess, 'success');
+            }
         }
-      });
-    }, { threshold: 0.5 });
 
-    const statsSection = document.querySelector('.stats-section');
-    if (statsSection) {
-      observer.observe(statsSection);
-    }
+        function showAlert(formType, message, type) {
+            const alertDiv = document.getElementById(formType === 'login' ? 'loginAlert' : 'registerAlert');
+            if (alertDiv) {
+                const icon = type === 'danger' ? 'fa-exclamation-triangle' : (type === 'success' ? 'fa-check-circle' : 'fa-info-circle');
+                alertDiv.innerHTML = `
+                    <div class="alert alert-${type}">
+                        <i class="fas ${icon}"></i>
+                        <span>${message}</span>
+                    </div>
+                `;
 
-    // Navbar scroll effect
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(42, 63, 84, 0.98)';
-        navbar.style.boxShadow = 'var(--shadow-lg)';
-      } else {
-        navbar.style.background = 'rgba(42, 63, 84, 0.95)';
-        navbar.style.boxShadow = 'var(--shadow-md)';
-      }
-    });
-
-    // Active nav link based on scroll position
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-          current = section.getAttribute('id');
+                setTimeout(() => {
+                    const alert = alertDiv.querySelector('.alert');
+                    if (alert) {
+                        alert.style.transition = 'opacity 0.5s';
+                        alert.style.opacity = '0';
+                        setTimeout(() => alert.remove(), 500);
+                    }
+                }, 5000);
+            }
         }
-      });
 
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
+        function switchTab(tab) {
+            const loginTab = document.getElementById('loginTab');
+            const registerTab = document.getElementById('registerTab');
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+
+            if (tab === 'login') {
+                loginTab.classList.add('active');
+                registerTab.classList.remove('active');
+                loginForm.classList.add('active');
+                registerForm.classList.remove('active');
+                window.location.hash = 'login';
+                document.getElementById('loginAlert').innerHTML = '';
+            } else {
+                loginTab.classList.remove('active');
+                registerTab.classList.add('active');
+                loginForm.classList.remove('active');
+                registerForm.classList.add('active');
+                window.location.hash = 'register';
+                document.getElementById('registerAlert').innerHTML = '';
+            }
         }
-      });
-    });
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+        function togglePassword(inputId, iconId) {
+            const passwordInput = document.getElementById(inputId);
+            const icon = document.getElementById(iconId);
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
         }
-      });
-    });
 
-    // Typing effect for hero paragraph
-    const heroParagraph = document.querySelector('.hero-section p');
-    if (heroParagraph) {
-      const originalText = heroParagraph.textContent;
-      heroParagraph.textContent = '';
-      
-      let i = 0;
-      function typeWriter() {
-        if (i < originalText.length) {
-          heroParagraph.textContent += originalText.charAt(i);
-          i++;
-          setTimeout(typeWriter, 50);
+        function validateRegisterForm() {
+            let isValid = true;
+            const name = document.getElementById('registerName').value.trim();
+            const email = document.getElementById('registerEmail').value.trim();
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('registerConfirmPassword').value;
+            const terms = document.getElementById('termsCheckbox').checked;
+
+            if (name.length < 3) {
+                document.getElementById('registerNameError').innerText = 'Nama lengkap minimal 3 karakter';
+                document.getElementById('registerName').classList.add('is-invalid');
+                isValid = false;
+            } else {
+                document.getElementById('registerName').classList.remove('is-invalid');
+                document.getElementById('registerNameError').innerText = '';
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('registerEmailError').innerText = 'Format email tidak valid';
+                document.getElementById('registerEmail').classList.add('is-invalid');
+                isValid = false;
+            } else {
+                document.getElementById('registerEmail').classList.remove('is-invalid');
+                document.getElementById('registerEmailError').innerText = '';
+            }
+
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                document.getElementById('registerPasswordError').innerHTML = 'Password minimal 8 karakter, mengandung huruf dan angka';
+                document.getElementById('registerPassword').classList.add('is-invalid');
+                isValid = false;
+            } else {
+                document.getElementById('registerPassword').classList.remove('is-invalid');
+                document.getElementById('registerPasswordError').innerText = '';
+            }
+
+            if (password !== confirmPassword) {
+                document.getElementById('registerConfirmError').innerText = 'Password tidak cocok';
+                document.getElementById('registerConfirmPassword').classList.add('is-invalid');
+                isValid = false;
+            } else {
+                document.getElementById('registerConfirmPassword').classList.remove('is-invalid');
+                document.getElementById('registerConfirmError').innerText = '';
+            }
+
+            if (!terms) {
+                showAlert('register', 'Anda harus menyetujui Syarat & Ketentuan', 'warning');
+                isValid = false;
+            }
+
+            return isValid;
         }
-      }
-      
-      // Start typing effect after page load
-      window.addEventListener('load', typeWriter);
-    }
 
-    // Dynamic greeting update
-    function updateGreeting() {
-      const hour = new Date().getHours();
-      const greetingElement = document.querySelector('.hero-section p');
-      let greeting = '';
-      
-      if (hour < 10) {
-        greeting = "Selamat pagi! ☀️ Mulai hari Anda dengan semangat baru bersama platform digital terbaik.";
-      } else if (hour < 15) {
-        greeting = "Selamat siang! 🌤️ Waktunya mengoptimalkan produktivitas bisnis Anda.";
-      } else if (hour < 19) {
-        greeting = "Selamat sore! ⛅ Saatnya mengevaluasi perkembangan bisnis hari ini.";
-      } else {
-        greeting = "Selamat malam! 🌙 Waktunya merencanakan strategi bisnis esok hari.";
-      }
-      
-      if (greetingElement && greetingElement.textContent !== greeting) {
-        greetingElement.textContent = greeting;
-      }
-    }
+        function validateLoginForm() {
+            let isValid = true;
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
 
-    setInterval(updateGreeting, 60000);
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                document.getElementById('loginEmailError').innerText = 'Format email tidak valid';
+                document.getElementById('loginEmail').classList.add('is-invalid');
+                isValid = false;
+            } else {
+                document.getElementById('loginEmail').classList.remove('is-invalid');
+                document.getElementById('loginEmailError').innerText = '';
+            }
 
-    // Tooltip initialization
-    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
+            if (password.length < 1) {
+                if (!document.getElementById('loginEmailError').innerText) {
+                    document.getElementById('loginEmailError').innerText = 'Password harus diisi';
+                }
+                isValid = false;
+            }
 
-    // Popover initialization
-    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-    popoverTriggerList.map(function (popoverTriggerEl) {
-      return new bootstrap.Popover(popoverTriggerEl);
-    });
-  </script>
->>>>>>> 57e7575adf4790bc752e34b3bcca0e05c6870d53
+            return isValid;
+        }
+
+        function showForgotPassword(event) {
+            event.preventDefault();
+            const modal = new bootstrap.Modal(document.getElementById('forgotPasswordModal'));
+            modal.show();
+        }
+
+        function sendResetLink() {
+            const email = document.getElementById('forgotEmail').value;
+            if (!email) {
+                showAlert('login', 'Masukkan email Anda', 'warning');
+                return;
+            }
+            showAlert('login', 'Link reset password telah dikirim ke email Anda', 'success');
+            const modal = bootstrap.Modal.getInstance(document.getElementById('forgotPasswordModal'));
+            modal.hide();
+        }
+
+        function setButtonLoading(button, isLoading) {
+            if (isLoading) {
+                button.disabled = true;
+                button.innerHTML = '<span class="spinner"></span> Memproses...';
+            } else {
+                button.disabled = false;
+                const isLogin = button.id === 'loginBtn';
+                button.innerHTML = isLogin ?
+                    '<i class="fas fa-sign-in-alt"></i> Masuk' :
+                    '<i class="fas fa-user-plus"></i> Daftar Sekarang';
+            }
+        }
+
+        // DOM Ready
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.location.hash === '#register') {
+                switchTab('register');
+            } else {
+                switchTab('login');
+            }
+
+            displayFlashMessages();
+
+            const loginForm = document.getElementById('loginFormElement');
+            if (loginForm) {
+                loginForm.addEventListener('submit', function(e) {
+                    if (!validateLoginForm()) {
+                        e.preventDefault();
+                    } else {
+                        setButtonLoading(document.getElementById('loginBtn'), true);
+                    }
+                });
+            }
+
+            const registerForm = document.getElementById('registerFormElement');
+            if (registerForm) {
+                registerForm.addEventListener('submit', function(e) {
+                    if (!validateRegisterForm()) {
+                        e.preventDefault();
+                    } else {
+                        setButtonLoading(document.getElementById('registerBtn'), true);
+                    }
+                });
+            }
+
+            // Real-time validation
+            const inputs = ['registerName', 'registerEmail', 'registerPassword', 'registerConfirmPassword', 'loginEmail'];
+            inputs.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.addEventListener('input', function() {
+                        this.classList.remove('is-invalid');
+                        const errorId = id + 'Error';
+                        if (document.getElementById(errorId)) {
+                            document.getElementById(errorId).innerText = '';
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>

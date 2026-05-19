@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GudangPro - Sistem Manajemen Gudang</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #2f2f2f 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .home-container {
+            width: 100%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Header with brand */
+        .home-header {
+            background: #009fa5;
+            padding: 40px 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .home-header::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: white;
+            border-radius: 60px 60px 0 0;
+        }
+        
+        .brand-icon {
+            width: 90px;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 45px;
+            backdrop-filter: blur(5px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .brand-name {
+            color: white;
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .brand-tagline {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Content area */
+        .home-content {
+            padding: 50px 40px 40px;
+            background: white;
+        }
+        
+        /* Welcome text */
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .welcome-section h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+        
+        .welcome-section p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        /* Tab navigation */
+        .auth-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            background: #f5f5f5;
+            padding: 8px;
+            border-radius: 60px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .tab-btn {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: transparent;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .tab-btn i {
+            font-size: 18px;
+        }
+        
+        .tab-btn.active {
+            background: #009fa5;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 159, 165, 0.3);
+        }
+        
+        /* Forms container */
+        .forms-container {
+            position: relative;
+            min-height: 400px;
+        }
+        
+        .auth-form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: all 0.4s ease-in-out;
+            opacity: 0;
+            transform: translateX(20px);
+            pointer-events: none;
+        }
+        
+        .auth-form.active {
+            opacity: 1;
+            transform: translateX(0);
+            pointer-events: all;
+        }
+        
+        /* Form elements */
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #4a4a4a;
+            margin-bottom: 8px;
+        }
+        
+        .input-wrapper {
+            position: relative;
+        }
+        
+        .input-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            font-size: 18px;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 16px 16px 16px 50px;
+            border: 2px solid #e5e7eb;
+            border-radius: 20px;
+            font-size: 15px;
+            transition: all 0.3s;
+            background: #f9fafb;
+        }
+        
+        .form-input:focus {
+            border-color: #009fa5;
+            outline: none;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(0, 159, 165, 0.1);
+        }
+        
+        /* Form options */
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        .remember-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #4a4a4a;
+            font-size: 14px;
+        }
+        
+        .remember-checkbox input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #009fa5;
+        }
+        
+        .forgot-link {
+            color: #009fa5;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Submit button */
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: #009fa5;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-submit:hover {
+            background: #007b82;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 159, 165, 0.3);
+        }
+        
+        /* Password hint */
+        .password-hint {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-top: 5px;
+        }
+        
+        /* Alert */
+        .alert {
+            padding: 16px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .alert-danger {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fecaca;
+        }
+        
+        .alert i {
+            font-size: 18px;
+        }
+        
+        /* Footer */
+        .home-footer {
+            text-align: center;
+            padding: 20px 40px 30px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .footer-text {
+            color: #9ca3af;
+            font-size: 13px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .home-header {
+                padding: 30px 20px 20px;
+            }
+            
+            .home-content {
+                padding: 40px 20px 30px;
+            }
+            
+            .brand-name {
+                font-size: 32px;
+            }
+            
+            .brand-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 35px;
+            }
+            
+            .welcome-section h1 {
+                font-size: 24px;
+            }
+            
+            .auth-tabs {
+                max-width: 100%;
+            }
+            
+            .form-options {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+        <!-- Header with brand -->
+        <div class="home-header">
+            <div class="brand-icon">
+                <i class="fas fa-warehouse"></i>
+            </div>
+            <div class="brand-name">GudangPro</div>
+            <div class="brand-tagline">Sistem Manajemen Gudang Terintegrasi</div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="home-content">
+            <!-- Welcome section -->
+            <div class="welcome-section">
+                <h1>Selamat Datang di GudangPro</h1>
+                <p>Kelola stok barang Anda dengan mudah, cepat, dan efisien</p>
+            </div>
+            
+            <!-- Tab navigation -->
+            <div class="auth-tabs">
+                <button class="tab-btn active" id="loginTab" onclick="switchTab('login')">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
+                <button class="tab-btn" id="registerTab" onclick="switchTab('register')">
+                    <i class="fas fa-user-plus"></i>
+                    Register
+                </button>
+            </div>
+            
+            <!-- Forms container -->
+            <div class="forms-container">
+                <!-- LOGIN FORM -->
+                <div class="auth-form active" id="loginForm">
+                    <!-- Error alert -->
+                    <?php if(session()->getFlashdata('error')): ?>
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <?= session()->getFlashdata('error') ?>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <form action="<?= base_url('/login/authenticate'); ?>" method="post">
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" class="form-input" 
+                                       placeholder="Masukkan email" 
+                                       name="email" 
+                                       value="<?= old('email') ?>"
+                                       required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" class="form-input" 
+                                       placeholder="Masukkan password" 
+                                       name="password" 
+                                       required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="remember-checkbox">
+                                <input type="checkbox" name="remember"> 
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="forgot-link">Lupa password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Masuk ke Akun
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- REGISTER FORM -->
+                <div class="auth-form" id="registerForm">
+                    <!-- Validation errors -->
+                    <?php if(isset($validation)): ?>
+                        <div class="alert alert-danger">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <?= $validation->listErrors() ?>
+                        </div>
+                    <?php endif; ?>
+                    
+                    <form action="<?= base_url('/register/save'); ?>" method="post">
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input type="email" class="form-input" 
+                                       placeholder="Masukkan email" 
+                                       name="email" 
+                                       value="<?= set_value('email') ?>"
+                                       required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" class="form-input" 
+                                       placeholder="Minimal 8 karakter" 
+                                       name="password" 
+                                       required>
+                            </div>
+                            <div class="password-hint">
+                                <i class="fas fa-info-circle"></i>
+                                Minimal 8 karakter
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Konfirmasi Password</label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-lock input-icon"></i>
+                                <input type="password" class="form-input" 
+                                       placeholder="Ulangi password" 
+                                       name="confirm_password" 
+                                       required>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-user-plus"></i>
+                            Daftar Akun Baru
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="home-footer">
+            <div class="footer-text">
+                <i class="fas fa-shield-alt me-2"></i>
+                Data Anda aman dan terenkripsi
+            </div>
+            <div class="footer-text mt-2">
+                &copy; 2024 GudangPro. All rights reserved.
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript for tab switching -->
+    <script>
+        function switchTab(tab) {
+            // Update tab buttons
+            document.getElementById('loginTab').classList.remove('active');
+            document.getElementById('registerTab').classList.remove('active');
+            
+            // Update forms
+            document.getElementById('loginForm').classList.remove('active');
+            document.getElementById('registerForm').classList.remove('active');
+            
+            if (tab === 'login') {
+                document.getElementById('loginTab').classList.add('active');
+                document.getElementById('loginForm').classList.add('active');
+            } else {
+                document.getElementById('registerTab').classList.add('active');
+                document.getElementById('registerForm').classList.add('active');
+            }
+        }
+        
+        // Check URL hash for direct tab access
+        window.addEventListener('load', function() {
+            if (window.location.hash === '#register') {
+                switchTab('register');
+            } else if (window.location.hash === '#login') {
+                switchTab('login');
+            }
+        });
+        
+        // Auto-hide alerts after 5 seconds
+        document.addEventListener('DOMContentLoaded', function() {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(function(alert) {
+                setTimeout(function() {
+                    alert.style.transition = 'opacity 0.5s';
+                    alert.style.opacity = '0';
+                    setTimeout(function() {
+                        alert.remove();
+                    }, 500);
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
